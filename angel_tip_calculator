@@ -1,0 +1,20 @@
+def main():
+    dollars = dollars_to_float(input("How much was the meal? "))
+    percent = percent_to_float(input("What percentage would you like to tip? "))
+    tip = dollars * percent
+    print(f"Leave ${tip:.2f}")
+
+def dollars_to_float(d):
+    #Eliminate $ symbol
+    dollar = d.replace("$", "")
+    #Convert dollar amount to a float
+    return float(dollar)
+
+def percent_to_float(p):
+    #Eliminate % symbol
+    percent_no_symbol = p.replace("%", "")
+    #Convert percentage to a 2 decimal float
+    percent_float = float(percent_no_symbol) /100
+    return percent_float
+
+main()
