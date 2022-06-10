@@ -6,15 +6,14 @@ def main():
 
 def dollars_to_float(d):
     #Eliminate $ symbol
-    dollar = d.replace("$", "")
+    dollar = float(d.strip("$"))
     #Convert dollar amount to a float
-    return float(dollar)
+    return dollar
 
 def percent_to_float(p):
     #Eliminate % symbol
-    percent_no_symbol = p.replace("%", "")
+    percent_float = int(p.strip("%"))
     #Convert percentage to a 2 decimal float
-    percent_float = float(percent_no_symbol) /100
-    return percent_float
+    return percent_float/100
 
 main()
